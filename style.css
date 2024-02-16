@@ -6,19 +6,25 @@ body {
     justify-content: center;
     min-height: 100vh;
     margin: 0;
-    background-color: #f0f0f0;
+    background-color: #f0f0f0; 
+}
+
+h1 {
+    margin-bottom: 20px;
 }
 
 .game-board {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* Equal width columns */
     gap: 10px;
-    margin-bottom: 20px;
+    max-width: 350px; /* Limit max size of the board */
+    margin: 20px auto; /* Center the board horizontally */
 }
 
 .cell {
-    width: 100px;
-    height: 100px;
+    width: 30%; /* Adjust as needed */
+    height: 0;  
+    padding-bottom: 30%; /* Maintains 1:1 square aspect ratio  */
     border: 1px solid #999;
     display: flex;
     align-items: center;
@@ -29,4 +35,14 @@ body {
 
 .controls {
     text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Example green button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
